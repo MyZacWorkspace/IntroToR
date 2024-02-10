@@ -1,0 +1,3 @@
+#Ignore R metadata and workspace data 
+.RData
+.RHistory
