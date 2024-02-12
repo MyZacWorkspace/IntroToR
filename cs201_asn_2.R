@@ -125,5 +125,56 @@ sum(north_c_areas)
 
 ##Problem 3
 
+rand_bw <- function(low, high)
+{
+  return (sample(low:high, 1, replace = FALSE)[1])
+}
+
+#Testing rand_bw
+rand_bw(1, 6)				# return an integer between 1 and 6
+rand_bw(0, 1)				# return an integer between 0 and 1
+rand_bw(19, 0)			# return an integer between 19 and 0
+rand_bw(low = 1, high = 20)	# return an integer between 1 and 20
+rand_bw(hi = 1, lo = 20)		# return an integer between 1 and 20
+
+
+# All of the above are valid ways to call rand_bw.
+
+##Problem 4
+
+pypr <- function(vec)
+{
+  strings_1 <- paste(vec, collapse = ",")[1]
+  s <- paste(c("[", strings_1, "]"), collapse = "")[1]
+  s
+}
+
+mystrvec <- c('a', 'b', 'c', 'd')
+mystrvec
+#[1] "a" "b" "c" "d"
+
+
+# call the pypr function
+pypr(mystrvec)
+
+
+# output
+#[1] "[a,b,c,d]"
+
+
+
+
+myintvec <- c(4, 3, 2, 1)
+myintvec
+#[1] 4 3 2 1
+
+
+# call the pypr function
+pypr(myintvec)
+
+
+# output
+#[1] "[4,3,2,1]"
+
 
 
