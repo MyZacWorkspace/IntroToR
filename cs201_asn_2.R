@@ -77,7 +77,7 @@ barplot(num_weight_all, xlab = "Group" , names.arg = groups,
 weight_all <- list(ctrl = PlantGrowth$weight[ctrl], trt1 = PlantGrowth$weight[trt1], 
                    trt2 = PlantGrowth$weight[trt2])
 boxplot(weight_all, 
-        main = "Plant Growth Data", xlab = "Group", ylab = "Dried weight of plants")
+        main = "PlantGrowth Data", xlab = "Group", ylab = "Dried weight of plants")
 
 ##Problem 2
 st_area_region <- data.frame(state.abb, state.area, state.region)
