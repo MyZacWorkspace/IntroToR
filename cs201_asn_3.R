@@ -12,18 +12,27 @@ pop_density <- function(abb)
   corrected_population <- state.x77[,1]*1000
   
   #population density is population divided by area
-  density <- round(x = (corrected_population / state.x77[,8]), digits = 1)
+  density_pop <- round(x = (corrected_population / state.x77[,8]), digits = 1)
   
-  names(density) <- c("Population Density")
   
-  pop_dens <- density[state.abb == toupper(abb)]
+  names(density_pop) <- c("Population Density")
+  
+  pop_dens <- density_pop[state.abb == toupper(abb)]
   
   
   #String to return
   string_1 <- paste(c(rownames(state.x77)[state.abb == toupper(abb)], ":"), sep = "", collapse = "")
   
-  return (paste(c(string_1 , pop_dens , "people per square mile (1977)"), sep = "", collapse =" "))
+  return (paste(string_1 , pop_dens , "people per square mile (1977)", sep = "", collapse =" "))
 }
+
+#corrected_population <- state.x77[,1]*1000
+
+#population density is population divided by area
+#density_pop <- round(x = (corrected_population / state.x77[,8]), digits = 1)
+
+#density_pop
+
 
 pop_density('NJ')
 # returns
@@ -78,7 +87,7 @@ most_frequent_flip
 #gets the most frequent number of flips, from the contingency table that is returned
 as.integer(names(which(flips_vec_freq == most_frequent_flip))[1])
 
-#ANSWER: Three coin flips is the most frequent number of coin flips required to get 3 heads in a row. 
+#ANSWER: 3 coin flips is the most frequent number of coin flips required to get 3 heads in a row. 
 
 #Part B 
 
