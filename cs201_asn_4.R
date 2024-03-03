@@ -22,6 +22,8 @@ attach(state.pop) # add PCTPOPCHG as a variable in ide
 # check to see where indices match
 # because of built-in vectorization causing unintentional recycling, a for-loop needs to be implemented
 # NOT: NAME[PCTPOPCHG == sort(pct.pop.change, decreasing = TRUE)[1:5]]
+state.pop[order(state.pop$PCTPOPCHG, decreasing=TRUE), c(2, 7)]
+
 top5inc <- vector(mode = "numeric" , length = 5)
 for(i in 1:5)
 {
